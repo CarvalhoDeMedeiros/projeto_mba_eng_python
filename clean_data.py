@@ -11,6 +11,8 @@ class CleanData:
         Returns:
             dataframe: dataframe limpo
     '''
+    def __init__(self):
+        super().__init__()
     def exeute(self):
         '''
         Função responsavel por executar o fluxo do projeto
@@ -22,7 +24,9 @@ class CleanData:
         '''
         df = self.load_data()
 
-        self.clean_data(df)
+        df_work = self.clean_data(df)
+
+        return df_work
 
     def load_data(self):
         df = pd.read_csv("https://raw.githubusercontent.com/JackyP/testing/master/datasets/nycflights.csv", index_col=0)
@@ -96,5 +100,4 @@ class CleanData:
 
         print(df_work.head())
 
-if __name__ == "__main__":
-    CleanData().exeute()
+        return df_work

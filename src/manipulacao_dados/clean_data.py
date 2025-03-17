@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-from tools import padroniza_str
+from src.tools.tools import padroniza_str
 
 
 class CleanData:

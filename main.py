@@ -1,5 +1,5 @@
-from clean_data import CleanData
-from transforme_data import TransformData
+from src.manipulacao_dados.clean_data import CleanData
+from src.manipulacao_dados.transforme_data import TransformData
 
 class Main:
     def orquestrador(self):
@@ -12,7 +12,7 @@ class Main:
 
         df_limpo = CleanData().exeute()
 
-        # df_tranformado = TransformData().execute(df_limpo)
+        df_tranformado = TransformData().execute(df_limpo)
 
 if __name__ == "__main__":
     Main().orquestrador()
